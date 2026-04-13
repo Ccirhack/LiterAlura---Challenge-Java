@@ -32,8 +32,7 @@ books and authors in a PostgreSQL database.
 
 ```bash
 # 1. Clone the repository
-git clone [https://github.com/Ccirhack/LiterAlura---Challenge-Java.git
-cd LiterAlura---Challenge-Java](https://github.com/Ccirhack/literalura-java)
+git clone https://github.com/Ccirhack/literalura-java
 
 # 2. Configure your database in src/main/resources/application.properties
 spring.datasource.url=jdbc:postgresql://localhost:5432/literalura
