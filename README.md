@@ -1,71 +1,62 @@
-# literAlura
+# LiterAlura
 
-[literalura: GitHub](https://github.com/Ccirhack/LiterAlura---Challenge-Java.git)
+Book catalog app built with Spring Boot that integrates with the
+[Gutendex API](https://gutendex.com) to search, store and query
+books and authors in a PostgreSQL database.
 
-## Descripción
+![Java](https://img.shields.io/badge/Java-ED8B00?style=flat&logo=openjdk&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat&logo=springboot&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white)
+![Jackson](https://img.shields.io/badge/Jackson-000000?style=flat&logo=json&logoColor=white)
 
-literAlura es un proyecto hecho con el framework Spring de Java que permite interactuar con la API de [gutendex.com](https://gutendex.com) para buscar y almacenar información 
-de libros y autores en una base de datos PostgreSQL. El proyecto incluye un menú interactivo que permite realizar varias operaciones, incluyendo la búsqueda de libros por título 
-y la visualización de datos almacenados.
+## Features
 
-## Menú de Opciones
+| # | Option | Description |
+|---|--------|-------------|
+| 1 | Search book by title | Queries Gutendex API and saves result to DB |
+| 2 | List saved books | Shows all books stored in the database |
+| 3 | List saved authors | Shows all authors stored in the database |
+| 4 | Authors alive in a year | Filters authors by a given year |
+| 5 | Books by language | Filters books by language code |
+| 0 | Exit | Closes the application |
 
-1. Buscar libro por título
-2. Listar libros registrados
-3. Listar autores registrados
-4. Listar autores vivos en un determinado año
-5. Listar libros por idioma
-0. Salir
+## Getting started
 
-## Funcionalidades
+### Prerequisites
 
-### 1. Buscar libro por título
+- Java 17+
+- PostgreSQL running locally
+- Maven
 
-Busca un libro en la API de gutendex.com utilizando un título proporcionado por el usuario. Los datos del libro encontrado se almacenan en la base de datos.
+### Installation
 
-### 2. Listar libros registrados
+```bash
+# 1. Clone the repository
+git clone https://github.com/Ccirhack/LiterAlura---Challenge-Java.git
+cd LiterAlura---Challenge-Java
 
-Muestra una lista de todos los libros almacenados en la base de datos.
+# 2. Configure your database in src/main/resources/application.properties
+spring.datasource.url=jdbc:postgresql://localhost:5432/literalura
+spring.datasource.username=YOUR_USER
+spring.datasource.password=YOUR_PASSWORD
 
-### 3. Listar autores registrados
+# 3. Run
+./mvnw spring-boot:run
+```
 
-Muestra una lista de todos los autores almacenados en la base de datos.
+## What I learned
 
-### 4. Listar autores vivos en un determinado año
+- Consuming a public REST API with Spring's RestTemplate
+- Persisting data with Spring Data JPA and PostgreSQL
+- Writing JPQL queries for filtering and reporting
+- Deserializing JSON with Jackson
+- Building interactive console menus in Spring Boot
 
-Muestra una lista de autores que estaban vivos en un año específico proporcionado por el usuario.
+## Contributing
 
-### 5. Listar libros por idioma
+Contributions are welcome. Please open an issue first to discuss
+any changes you'd like to make, then submit a pull request.
 
-Muestra una lista de libros almacenados en la base de datos filtrados por el idioma especificado por el usuario.
+## Contact
 
-### 0. Salir
-
-Cierra la aplicación.
-
-## Tecnologías Utilizadas
-
-- Java
-- Spring Boot
-- PostgreSQL
-- [Gutendex API](https://gutendex.com)
-- Jackson (para la conversión de JSON)
-- JPA (Java Persistence API)
-
-## Instalación
-
-1. Clona este repositorio en tu máquina local:
-   ```sh
-   git clone https://github.com/Ccirhack/LiterAlura---Challenge-Java.git
-
-2. Navega al directorio del proyecto:
-   cd literAlura
-3. Configura tu base de datos PostgreSQL y actualiza el archivo application.properties con tus credenciales de base de datos.
-4. Compila y ejecuta el proyecto.
-   
-## Contribuciones
-Las contribuciones son bienvenidas. Si deseas contribuir, por favor abre un issue primero para discutir los cambios que deseas realizar. 
-Si desea contribuir a este proyecto, por favor envíe un pull request con una descripción clara de los cambios propuestos. Sería de gran ayuda saber en qué puedo mejorar y aprender
-
-## Contacto
-Para cualquier pregunta o comentario, por favor contácteme a través de mi perfil de GitHub o por correo electrónico a yuan.retamozo.27@unsch.edu.pe
+Yuan Retamozo · [LinkedIn](https://www.linkedin.com/in/yuan-retamozo/) · yretamozovilca@gmail.com
